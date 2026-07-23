@@ -98,36 +98,14 @@ img {
 .brand {
   display: inline-flex;
   align-items: center;
-  gap: 12px;
   min-width: max-content;
 }
 
 .brand img {
-  width: 54px;
-  height: 40px;
+  width: 82px;
+  height: 62px;
   object-fit: contain;
   filter: drop-shadow(0 0 14px rgba(255, 130, 0, 0.2));
-}
-
-.brand span {
-  display: grid;
-  line-height: 0.9;
-}
-
-.brand strong {
-  font-family: var(--heading);
-  font-size: 29px;
-  font-weight: 400;
-  letter-spacing: 0.08em;
-}
-
-.brand small {
-  color: var(--orange);
-  font-family: var(--condensed);
-  font-size: 10px;
-  font-weight: 700;
-  letter-spacing: 0.38em;
-  text-transform: uppercase;
 }
 
 .primary-nav {
@@ -215,7 +193,7 @@ img {
 
 .hero-media {
   background-image: url("/sdz-airdrop-hero.png");
-  background-position: 57% center;
+  background-position: 57% 65%;
   background-size: cover;
   transform: scale(1.015);
   animation: hero-enter 1.4s cubic-bezier(0.22, 1, 0.36, 1) both;
@@ -936,51 +914,6 @@ img {
   min-width: 0;
 }
 
-.quick-read {
-  display: grid;
-  grid-template-columns: 0.55fr 1.45fr;
-  gap: 36px;
-  margin-bottom: 50px;
-  padding: 30px;
-  background: #171717;
-  color: white;
-  border-top: 3px solid var(--orange);
-}
-
-.quick-label {
-  display: block;
-  color: var(--orange-bright);
-  font-family: var(--condensed);
-  font-size: 10px;
-  font-weight: 800;
-  letter-spacing: 0.19em;
-  text-transform: uppercase;
-}
-
-.quick-read p {
-  margin: 12px 0 0;
-  color: #96938d;
-  font-size: 12px;
-  line-height: 1.6;
-}
-
-.quick-phrases {
-  display: flex;
-  flex-wrap: wrap;
-  align-content: flex-start;
-  gap: 8px;
-}
-
-.quick-phrases strong {
-  padding: 7px 9px;
-  background: rgba(255, 130, 0, 0.1);
-  border: 1px solid rgba(255, 130, 0, 0.26);
-  color: #e6e2db;
-  font-family: var(--condensed);
-  font-size: 10px;
-  letter-spacing: 0.03em;
-}
-
 .legal-prose {
   max-width: 830px;
 }
@@ -1402,12 +1335,8 @@ img {
   }
 
   .brand img {
-    width: 46px;
-    height: 34px;
-  }
-
-  .brand strong {
-    font-size: 24px;
+    width: 70px;
+    height: 52px;
   }
 
   .hero {
@@ -1415,7 +1344,7 @@ img {
   }
 
   .hero-media {
-    background-position: 62% center;
+    background-position: 62% 62%;
   }
 
   .hero-shade {
@@ -1576,9 +1505,6 @@ img {
     grid-template-columns: 1fr 1fr;
   }
 
-  .quick-read {
-    grid-template-columns: 1fr;
-  }
 }
 
 @media (prefers-reduced-motion: reduce) {

@@ -89,16 +89,7 @@ function renderDocument(content: string) {
   return blocks;
 }
 
-function quickRead(content: string) {
-  return Array.from(content.matchAll(/\*\*(.+?)\*\*/g))
-    .map((match) => match[1])
-    .filter((phrase, index, all) => all.indexOf(phrase) === index)
-    .slice(0, 12);
-}
-
 export function LegalDocumentView({ document }: { document: LegalDocument }) {
-  const summary = quickRead(document.content);
-
   return (
     <div className="site-shell">
       <SiteHeader />
@@ -127,20 +118,6 @@ export function LegalDocumentView({ document }: { document: LegalDocument }) {
           </aside>
 
           <article className="legal-document">
-            <div className="quick-read">
-              <div>
-                <span className="quick-label">Quick read</span>
-                <p>
-                  The emphasized wording forms a condensed reading path. The
-                  complete document below remains authoritative.
-                </p>
-              </div>
-              <div className="quick-phrases">
-                {summary.map((phrase) => (
-                  <strong key={phrase}>{phrase}</strong>
-                ))}
-              </div>
-            </div>
             <div className="legal-prose">{renderDocument(document.content)}</div>
           </article>
         </div>

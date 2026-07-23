@@ -23,15 +23,11 @@ export function SiteHeader({ overlay = false }: { overlay?: boolean }) {
         <Link className="brand" href="/" onClick={() => setOpen(false)}>
           <Image
             src="/sdz-mark.png"
-            alt=""
-            width={64}
-            height={64}
+            alt="SDZ Modding"
+            width={96}
+            height={72}
             priority
           />
-          <span>
-            <strong>SDZ</strong>
-            <small>Modding</small>
-          </span>
         </Link>
 
         <button

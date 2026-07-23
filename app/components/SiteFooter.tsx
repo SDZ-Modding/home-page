@@ -16,11 +16,12 @@ export function SiteFooter() {
       <div className="page-width footer-grid">
         <div className="footer-brand">
           <Link className="brand" href="/">
-            <Image src="/sdz-mark.png" alt="" width={64} height={64} />
-            <span>
-              <strong>SDZ</strong>
-              <small>Modding</small>
-            </span>
+            <Image
+              src="/sdz-mark.png"
+              alt="SDZ Modding"
+              width={96}
+              height={72}
+            />
           </Link>
           <p>
             Community-led DayZ development with a focus on maintainable work,
