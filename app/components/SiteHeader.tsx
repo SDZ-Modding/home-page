@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const navItems = [
   { href: "/info", label: "Info" },
@@ -15,9 +15,22 @@ const navItems = [
 export function SiteHeader({ overlay = false }: { overlay?: boolean }) {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const updateHeader = () => setScrolled(window.scrollY > 8);
+
+    updateHeader();
+    window.addEventListener("scroll", updateHeader, { passive: true });
+    return () => window.removeEventListener("scroll", updateHeader);
+  }, []);
 
   return (
-    <header className={`site-header ${overlay ? "site-header-overlay" : ""}`}>
+    <header
+      className={`site-header ${overlay ? "site-header-overlay" : ""} ${
+        scrolled ? "site-header-scrolled" : ""
+      }`}
+    >
       <div className="header-line" />
       <div className="page-width header-inner">
         <Link className="brand" href="/" onClick={() => setOpen(false)}>
